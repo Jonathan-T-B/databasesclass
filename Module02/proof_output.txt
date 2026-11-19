@@ -1,0 +1,18 @@
+﻿--- COUNT: sensors per machine (1 machine, 2 sensors = 1:n)
+machine_id  sensors
+----------  -------
+         1        2
+--- COUNT: machines per sensor (never more than 1)
+sensor_id  machines
+---------  --------
+        1         1
+        2         1
+--- Negative test: a sensor for a machine that does not exist must be rejected
+sqlite3 : Error near line 26 of Module02/proof_sensor.sql: FOREIGN KEY constraint failed
+In Zeile:1 Zeichen:1
++ sqlite3 :memory: ".read Module02/proof_sensor.sql" 2>&1 | Out-File -E ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error near line...nstraint failed:String) [], RemoteExceptio 
+   n
+    + FullyQualifiedErrorId : NativeCommandError
+ 
