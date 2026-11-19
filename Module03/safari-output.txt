@@ -1,0 +1,33 @@
+﻿=== BEFORE INDEX ===
+--- Q1
+QUERY PLAN
+`--SCAN maint_job
+--- Q2
+QUERY PLAN
+`--SCAN machine
+--- Q3
+QUERY PLAN
+`--SCAN maint_job
+=== AFTER INDEX ix_job_tech ===
+--- Q1
+QUERY PLAN
+`--SEARCH maint_job USING INDEX ix_job_tech (technician=?)
+--- Q2
+QUERY PLAN
+`--SCAN machine
+--- Q3
+QUERY PLAN
+`--SCAN maint_job
+=== BREAK IT ON PURPOSE ===
+--- Q4: function wraps the column
+QUERY PLAN
+`--SCAN maint_job
+--- Q5: leading wildcard
+QUERY PLAN
+`--SCAN maint_job
+--- Q6: trailing wildcard only (for contrast)
+QUERY PLAN
+`--SCAN maint_job
+--- Q7: GLOB, case-sensitive prefix (for contrast)
+QUERY PLAN
+`--SEARCH maint_job USING INDEX ix_job_tech (technician>? AND technician<?)

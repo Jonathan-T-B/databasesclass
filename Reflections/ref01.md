@@ -9,6 +9,7 @@
 there were a lot of new information and terms which I previously did not know additionally after not using GitHub in a while I needed some getting used to it.
 - Was there any good/fun “struggling”/exploration?
   Any show stoppers – anything where you should reach out to peers or instructors?
+  While playing the SQL game i had some issues when looking for the correct way to search for information. Especially later on as it got more difficult I needed some help to go further. 
 
 - How was your interaction with peers/instructors?
 Very Positive. they were a good assistence when I encountered some hurdeles or did not understand something as clealy. But I still could not understand some parts even after talking about it with them.
@@ -16,4 +17,6 @@ Very Positive. they were a good assistence when I encountered some hurdeles or d
   - Who helped you, gave feedback, was it valuable?
   We helped eachother inside our group hwich I think was valuable but it made it a little more difficult to understand the content 
   - Who did you help, gave feedback to?
+
   - Did you present, implement, made a PR, or fix something that was crucial for the class in itself?
+  

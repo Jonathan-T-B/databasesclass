@@ -1,0 +1,70 @@
+Module 2: 
+Conceptual database design
+End goal of this module
+1.	Construct ER/ EER model (entities, attributes, keys, relationships, cardinalities) form undocumented SQL schema
+2.	Identify integrity defects
+i.	Missing foreign keys, orphan rows, redundant data, normalization violations
+3.	Differentiate entity relationship from an attribute and surrogate key from natural Key. Plus justification of the choice
+4.	Schema as a code-first data contract (Pydantic / SQLAlchemy)
+5.	Requirements the schema has forgot
+
+Story/ example of use case
+Maschine in plastic injection molding company stops working and then planner asks which parts have been replaced and how often.
+Main issue is that it takes a while to find the information since it is just text columns without relationship to eachother. 
+
+Entities (thing of independent existence (a machine, a part, a technician))
+Attributes (describes an entity like a machine’s serial number/ install date)
+Relationships (this is the link of entities. E.g. technician doing a maintenance Job on machine)
+Keys 
+a.	Primary Key [PK] Unique identification of one row
+b.	Foreign Key [FK] Key that lies within another table
+c.	natural key (A real world identifier e.g. seriel number)
+d.	surrogate key (An artificial identifier e.g. integer ID [number to uniquely identify a record in a database])
+Cardinality (number of distinct values in a table column)[1to1, 1 to many, many to many]
+-	{rarely used} One to one: One dataset from A ties to max one from B. Goes both ways.
+-	One to many (1 to n): N means that every dataset from table A can be tied to none, one or many datasets from table B (no real limit). But data from table B can only be tied into one dataset in table A!
+-	Many to many (m to n): datasets from table A can be tied to zero, one or many datasets of table B and the other way around. (sometimes you need a help table with 1: n cardinality)
+Orphan row (record references to a non-existent record)
+
+Redundant Data (storing the same information multiple times in the same database when it does not need to be duplicated. Inconsistent and storage wasting.)
+Why is this not ideal/ bad?
+1.	Wastes storage (same info many times)
+2.	Updating data means you need to change many rows.
+If not, database will be inconsistent!
+3.	Insert/ delete errors 
+To fix this: Store information in its own table!
+Normalization Violations in databases
+-	Can lead to Contradictions within the data itself
+-	More complex to understand 
+-	Harder to enhance and extend 
+-	Vulnerable to insertion/ deletion/ update anomalies
+Source for the NF rules: https://youtu.be/GFQaEYEc8_8?si=n7lhIlDXn1YBim7_
+
+
+FIVE RULES of NORMALIZATION in Databases
+
+First Normal Form Rules (1NF)
+-	Using row order to convey information (violates 1NF)
+-	Data types are mixed in the same column
+-	No primary Key in place = violates 1NF
+-	Storage of repeated group of data items in a single row  ❌1NF
+
+Second Normal Form Rule (2NF)
+-   Each non-key attribute must be dependent on primary Key
+
+Third Normal Form Rule (3NF)
+-   non key attributes must be dependent only on the Key
+
+Fourth Normal Form Rule (4NF)
+- Multi Valued dependencies are only allowed for the Key
+
+Fifth Normal Form Rule (5NF)
+-   It must not be possible to describe the table as the logical result of joining some table together
+
+
+
+There are 5 normal forms for databases 
+(Goal: making the database not express redundant information)
+Levels of danger Shown in these normal forms (1 = minimum safety; 5 = Most safe)
+
+ 

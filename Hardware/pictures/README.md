@@ -1,1 +1,2 @@
 # Pictures for taken out Hardware
+![alt text](<SQL game5.png>) ![alt text](<Screenshot 2026-10-14 232912.png>) ![alt text](SQLgame4.png) ![alt text](<Screenshot 2026-10-09 112458.png>) ![alt text](SQLgame3.png) ![alt text](<SQL game2.png>) ![alt text](<Screenshot 2026-10-09 112032.png>) ![alt text](<SQL game.png>) ![alt text](<Screenshot 2026-10-09 111142.png>)
