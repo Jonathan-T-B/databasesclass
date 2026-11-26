@@ -1,5 +1,8 @@
 # Personal Portfolio for the IoT/MCU class Hochschule Bielefeld HSBI
 
+<<<<<<< HEAD
+=======
+
 Author: Jonathan Behring
 
 My partners are Aron Grudaj, [portfolio link](https://github.com/AronGrudaj/Databases-Portfolio) and Rayan Slassi, [portfolio link](https://github.com/rayansls/Databases)
