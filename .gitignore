@@ -1,0 +1,8 @@
+Module06a/history.db
+Module06a/*.csv
+Module06a/*.parquet
+Module06a/devices.json
+
+Module06b/sessions*
+Module06b/lock_demo.db*
+.venv/
